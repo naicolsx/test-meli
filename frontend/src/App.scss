@@ -1,0 +1,38 @@
+// Variables
+$color-header-bg: #FFE600;
+$color-page-bg: #EBEBEB;
+
+$color-title: rgba(0, 0, 0, 0.9);
+$color-subtitle: rgba(0, 0, 0, 0.55);
+$color-price: rgba(0, 0, 0, 0.9);
+$color-green: #00A650;
+$color-blue: #3483FA;
+
+$font-main: 'Proxima Nova', sans-serif;
+
+// Font Sizes
+$font-size-title: 20px;
+$font-size-subtitle: 14px;
+$font-size-price: 24px;
+$font-size-other-green: 14px;
+$font-size-other-blue: 15px;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  background-color: $color-page-bg;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
