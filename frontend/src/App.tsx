@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.scss';
+import Header from './components/Header.tsx';
+import './styles/app.scss'
+
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <h1>Test meli</h1>
+        <Header />
         <Routes>
+          <Route path="/items" />
         </Routes>
       </div>
     </Router>

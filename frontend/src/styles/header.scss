@@ -1,0 +1,118 @@
+@import 'app';
+
+.header {
+  background-color: $color-header-bg;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__logo-image {
+  height: 40px;
+  width: auto;
+}
+
+.header__search {
+  flex: 1;
+  max-width: 1018px;
+}
+
+@media (max-width: 768px) {
+  .header__search {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+}
+
+.search-bar__input {
+  width: 100%;
+  height: 48px;
+  padding: 0 50px 0 16px;
+  border: none;
+  border-radius: 2px;
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+  color: $color-subtitle;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+}
+
+.search-bar__input::placeholder {
+  color: $color-subtitle;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar__input:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 48px;
+  width: 48px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  border-radius: 0 2px 2px 0;
+}
+
+.search-bar__button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.search-bar__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.search-bar__button:active {
+  background-color: rgba(0, 0, 0, 0.15);
+  transform: scale(0.98);
+}
+
+.search-bar__icon {
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.2s ease;
+}
+
+.search-bar__button:hover .search-bar__icon {
+  color: rgba(0, 0, 0, 0.8);
+}
