@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header.tsx';
-import SearchList from './pages/Search.tsx';
-import ProductDetail from './pages/ProductDetail.tsx';
-import Home from './pages/Home.tsx';
+import Header from './components/Header';
+import SearchList from './pages/Search';
+import ProductDetail from './pages/ProductDetail';
+import Home from './pages/Home';
 import './styles/app.scss'
 
 function App() {

@@ -7,7 +7,7 @@ export default function Header() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (query.trim()) {
       navigate(`/items?search=${query}`);

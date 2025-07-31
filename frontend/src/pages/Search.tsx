@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { useLocation, Link } from "react-router-dom"
 import axios from "axios"
 import "../styles/searchList.scss"
-import ProductCard from "../components/ProductCard.tsx"
+import ProductCard from "../components/ProductCard"
 
 const Search = () => {
-  const [items, setItems] = useState([])
+  const [products, setProducts] = useState([])
   const location = useLocation()
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Search = () => {
     const fetchItems = async () => {
       try {
         const { data } = await axios.get(`http://localhost:3001/api/items/search?q=${query}`)
-        setItems(data.items)
+        setProducts(data.items)
       } catch (err) {
         console.error("Error search", err)
       }
@@ -28,8 +28,8 @@ const Search = () => {
     <div className="search-results">
       <div className="search-results__container">
         <div className="product-list">
-          {items.map((item, index) => (
-            <ProductCard item={item} key={index} />
+          {products.map((product, index) => (
+            <ProductCard product={product} key={index} />
           ))}
         </div>
       </div>
