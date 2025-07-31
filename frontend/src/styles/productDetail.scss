@@ -1,0 +1,242 @@
+@import 'app';
+
+.product-detail {
+  background: $color-page-bg;
+  min-height: 100vh;
+  padding: 20px 0;
+
+  &__container {
+    max-width: $card-width;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: $color-subtitle;
+  }
+
+  &__content {
+    background: $card-bg;
+    box-shadow: $card-shadow;
+    padding: 32px;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 2px;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  color: $color-subtitle;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__link {
+    color: $color-blue;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__separator {
+    margin: 0 4px;
+  }
+
+  &__text {
+    flex: 1;
+    text-transform: capitalize;
+  }
+
+  &__publication {
+    font-size: 15px;
+    font-weight: 300;
+    color: $color-subtitle;
+  }
+}
+
+.image-gallery {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+
+  &__thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__thumbnail {
+    width: 60px;
+    height: 60px;
+    border: 2px solid transparent;
+    overflow: hidden;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    transition: border-color 0.2s ease;
+
+    &--active {
+      border-color: $color-blue;
+    }
+
+    &:hover {
+      border-color: rgba(52, 131, 250, 0.5);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__main {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+  }
+
+  &__main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.product-info {
+  flex: 1;
+
+  &__status {
+    font-size: 15px;
+    font-weight: 300;
+    color: $color-subtitle;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $color-title;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+  }
+
+  &__seller {
+    font-size: 15px;
+    font-weight: 300;
+    color: $color-subtitle;
+    margin: 0 0 24px 0;
+  }
+
+  &__pricing {
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    font-size: 36px;
+    font-weight: 400;
+    color: $color-title;
+    margin: 0 0 8px 0;
+  }
+
+  &__installments {
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-subtitle;
+  }
+
+  &__shipping {
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-green;
+    margin: 16px 0;
+  }
+
+  &__attributes {
+    margin-top: 24px;
+  }
+
+  &__attribute {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 18px;
+
+    &-name {
+      font-weight: 300;
+      color: $color-title;
+      margin-right: 8px;
+    }
+
+    &-value {
+      font-weight: 600;
+      color: $color-title;
+    }
+  }
+}
+
+.product-description {
+  background: $card-bg;
+  box-shadow: $card-shadow;
+  padding: 32px;
+
+  &__title {
+    font-size: 22px;
+    font-weight: 400;
+    color: $color-title;
+    margin: 0 0 20px 0;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-title;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail__content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image-gallery {
+    flex-direction: column-reverse;
+
+    &__thumbnails {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__main {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .product-info__price {
+    font-size: 28px;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    &__publication {
+      align-self: flex-end;
+    }
+  }
+}
