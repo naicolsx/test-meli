@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './containers/Header';
 import SearchList from './pages/Search';
 import ProductDetail from './pages/ProductDetail';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        <Header  />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/items" element={<SearchList />} />

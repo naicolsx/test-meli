@@ -1,7 +1,7 @@
 import React from "react";
 import { Product } from "../types/Product";
 import { formatPrice } from "../utils/price";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product, key }: {product: Product, key:number }) => {
   return (

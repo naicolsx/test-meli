@@ -1,19 +1,15 @@
 import { Search } from "lucide-react";
-import '../styles/header.scss';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import "../styles/header.scss";
 
-export default function Header() {
-  const [query, setQuery] = useState("");
-  const navigate = useNavigate();
-
-  const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (query.trim()) {
-      navigate(`/items?search=${query}`);
-    }
-  };
-
+export default function Header({
+  query,
+  setQuery,
+  onSubmit,
+}: {
+  query: string;
+  setQuery: (query:string) => void;
+  onSubmit: (query: React.FormEvent<HTMLFormElement>) => void;
+}) {
   return (
     <header className="header">
       <div className="header__container">
@@ -26,7 +22,7 @@ export default function Header() {
         </div>
 
         <div className="header__search">
-          <form className="search-bar" onSubmit={handleClick}>
+          <form className="search-bar" onSubmit={onSubmit}>
             <input
               type="text"
               className="search-bar__input"
