@@ -38,7 +38,7 @@ const ProductDetail = () => {
     <div className="product-detail">
       <div className="product-detail__container">
         <nav className="breadcrumb">
-          <a href="#" className="breadcrumb__link">
+          <a href="/" className="breadcrumb__link">
             Volver al listado
           </a>
           <span className="breadcrumb__separator">|</span>

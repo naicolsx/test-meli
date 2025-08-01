@@ -1,6 +1,6 @@
 # Test Meli - Challenge Técnico Frontend
 
-Aplicación por búsqueda de productos de estilo Mercado Libre. Permite buscar productos, visualizar resultados con sus respectivos detalles y navegar hacia una vista de detalle por cada producto.
+Aplicación por búsqueda de productos de Mercado Libre. Permite buscar productos, visualizar resultados con su filtro y navegar hacia una vista de detalle por cada producto.
 
 ## 🚀 Tecnologías
 **🎨 Frontend:**
@@ -51,7 +51,7 @@ npm run storybook
 ## 🌱 Posibles mejoras
 
 - Implementar filtros por categoría o precio
-- Conexión con una API real (ej: MercadoLibre API)
+- Conexión con una API real (MercadoLibre API)
 - Test unitarios
 
 ---
